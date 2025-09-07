@@ -18,24 +18,6 @@ export default function ChatArea({ conversationId, onMenuClick }: ChatAreaProps)
 
   return (
     <div className="flex-1 flex flex-col bg-background">
-      {/* Mobile header */}
-      <div className="bg-card border-b border-border px-3 sm:px-4 md:px-6 py-3 sm:py-4 lg:hidden">
-        <div className="flex items-center justify-between">
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            onClick={onMenuClick}
-            data-testid="button-mobile-menu"
-          >
-            <Menu className="h-5 w-5" />
-          </Button>
-          <h1 className="text-base sm:text-lg font-semibold truncate px-2">Aspect AI</h1>
-          <Button variant="ghost" size="icon" data-testid="button-mobile-more">
-            <MoreVertical className="h-5 w-5" />
-          </Button>
-        </div>
-      </div>
-
       {/* Messages */}
       <MessageList
         messages={messages}
