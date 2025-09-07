@@ -87,13 +87,13 @@ export default function Sidebar({ open, onClose, currentConversationId }: Sideba
               <CardContent className="space-y-4">
                 <div>
                   <Label htmlFor="api-key" className="text-sm font-medium">
-                    OpenAI API Key
+                    Gemini API Key
                   </Label>
                   <div className="relative mt-2">
                     <Input
                       id="api-key"
                       type={showApiKey ? "text" : "password"}
-                      placeholder="sk-..."
+                      placeholder="AIza..."
                       className="pr-10"
                       data-testid="input-api-key"
                     />
@@ -113,7 +113,7 @@ export default function Sidebar({ open, onClose, currentConversationId }: Sideba
                     </Button>
                   </div>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Your API key is stored securely
+                    Get your free API key from aistudio.google.com
                   </p>
                 </div>
 
@@ -121,14 +121,14 @@ export default function Sidebar({ open, onClose, currentConversationId }: Sideba
                   <Label htmlFor="model" className="text-sm font-medium">
                     Model
                   </Label>
-                  <Select defaultValue="gpt-5">
+                  <Select defaultValue="gemini-2.5-flash">
                     <SelectTrigger className="mt-2" data-testid="select-model">
                       <SelectValue placeholder="Select model" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="gpt-3.5-turbo">GPT-3.5 Turbo</SelectItem>
-                      <SelectItem value="gpt-4">GPT-4</SelectItem>
-                      <SelectItem value="gpt-5">GPT-5</SelectItem>
+                      <SelectItem value="gemini-2.5-flash">Gemini 2.5 Flash</SelectItem>
+                      <SelectItem value="gemini-2.5-pro">Gemini 2.5 Pro</SelectItem>
+                      <SelectItem value="gemini-1.5-flash">Gemini 1.5 Flash</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

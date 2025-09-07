@@ -30,7 +30,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
               </div>
               <div className="min-w-0">
                 <h1 className="text-lg sm:text-xl font-semibold text-foreground truncate">AI Assistant</h1>
-                <p className="text-xs sm:text-sm text-muted-foreground hidden xs:block">Powered by OpenAI</p>
+                <p className="text-xs sm:text-sm text-muted-foreground hidden xs:block">Powered by Gemini</p>
               </div>
             </div>
           </div>
