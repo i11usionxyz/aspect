@@ -40,15 +40,15 @@ export default function MessageList({ messages, isLoading, conversationId }: Mes
 
   if (!conversationId) {
     return (
-      <div className="flex-1 flex items-center justify-center px-4 lg:px-6">
-        <div className="text-center py-8 max-w-md mx-auto">
-          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-            <span className="text-primary text-2xl">🧠</span>
+      <div className="flex-1 flex items-center justify-center px-3 sm:px-4 md:px-6">
+        <div className="text-center py-6 sm:py-8 max-w-md mx-auto px-4">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+            <span className="text-primary text-xl sm:text-2xl">🧠</span>
           </div>
-          <h2 className="text-2xl font-semibold text-foreground mb-2">
+          <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
             Welcome to AI Assistant
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
             I'm here to help you with any questions or tasks. Start a conversation by selecting one from the sidebar or creating a new one.
           </p>
         </div>
@@ -59,7 +59,7 @@ export default function MessageList({ messages, isLoading, conversationId }: Mes
   return (
     <div 
       ref={scrollRef}
-      className="flex-1 overflow-y-auto px-4 lg:px-6 py-6 scrollbar-thin"
+      className="flex-1 overflow-y-auto px-3 sm:px-4 md:px-6 py-4 sm:py-6 scrollbar-thin"
     >
       <div className="max-w-4xl mx-auto space-y-6">
         {isLoading && messages.length === 0 ? (
@@ -75,14 +75,14 @@ export default function MessageList({ messages, isLoading, conversationId }: Mes
             ))}
           </div>
         ) : messages.length === 0 ? (
-          <div className="text-center py-8">
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-primary text-2xl">💬</span>
+          <div className="text-center py-6 sm:py-8 px-4">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+              <span className="text-primary text-xl sm:text-2xl">💬</span>
             </div>
-            <h3 className="text-lg font-semibold text-foreground mb-2">
+            <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2">
               Start the conversation
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-sm sm:text-base text-muted-foreground">
               Type a message below to begin chatting with the AI assistant.
             </p>
           </div>

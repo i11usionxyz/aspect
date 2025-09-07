@@ -65,21 +65,21 @@ export default function Sidebar({ open, onClose, currentConversationId }: Sideba
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed lg:relative inset-y-0 left-0 z-50 w-80 bg-card border-r border-border transform transition-transform duration-200 ease-in-out lg:transform-none",
+          "fixed lg:relative inset-y-0 left-0 z-50 w-80 sm:w-84 md:w-80 bg-card border-r border-border transform transition-transform duration-200 ease-in-out lg:transform-none",
           open ? "translate-x-0" : "-translate-x-full lg:translate-x-0",
           "lg:block"
         )}
       >
         <div className="h-full flex flex-col">
           {/* Mobile close button */}
-          <div className="lg:hidden flex justify-end p-4">
+          <div className="lg:hidden flex justify-end p-3 sm:p-4">
             <Button variant="ghost" size="icon" onClick={onClose} data-testid="button-close-sidebar">
               <X className="h-5 w-5" />
             </Button>
           </div>
 
           {/* API Configuration */}
-          <div className="p-6 border-b border-border">
+          <div className="p-4 sm:p-6 border-b border-border">
             <Card>
               <CardHeader>
                 <CardTitle className="text-lg">Configuration</CardTitle>
@@ -137,7 +137,7 @@ export default function Sidebar({ open, onClose, currentConversationId }: Sideba
           </div>
 
           {/* Conversations */}
-          <div className="flex-1 p-6 overflow-y-auto">
+          <div className="flex-1 p-4 sm:p-6 overflow-y-auto">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-semibold">Conversations</h2>
               <Button

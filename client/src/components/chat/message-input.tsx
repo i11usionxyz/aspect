@@ -107,7 +107,7 @@ export default function MessageInput({ conversationId, onMessageSent }: MessageI
   const isLoading = sendMessageMutation.isPending || createAndSendMutation.isPending;
 
   return (
-    <div className="bg-card border-t border-border px-4 lg:px-6 py-4">
+    <div className="bg-card border-t border-border px-3 sm:px-4 md:px-6 py-3 sm:py-4">
       <div className="max-w-4xl mx-auto">
         {isLoading && (
           <div className="mb-4">
@@ -115,7 +115,7 @@ export default function MessageInput({ conversationId, onMessageSent }: MessageI
           </div>
         )}
         
-        <form onSubmit={handleSubmit} className="flex items-end space-x-4">
+        <form onSubmit={handleSubmit} className="flex items-end space-x-2 sm:space-x-3 md:space-x-4">
           <Button
             type="button"
             variant="ghost"
@@ -133,7 +133,7 @@ export default function MessageInput({ conversationId, onMessageSent }: MessageI
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="resize-none min-h-[48px] max-h-32 pr-12"
+              className="resize-none min-h-[44px] sm:min-h-[48px] max-h-28 sm:max-h-32 pr-10 sm:pr-12 text-sm sm:text-base"
               disabled={isLoading}
               data-testid="textarea-message"
             />
@@ -141,10 +141,10 @@ export default function MessageInput({ conversationId, onMessageSent }: MessageI
               type="button"
               variant="ghost"
               size="icon"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 h-8 w-8"
+              className="absolute right-2 sm:right-3 top-1/2 transform -translate-y-1/2 h-7 w-7 sm:h-8 sm:w-8"
               data-testid="button-emoji"
             >
-              <Smile className="h-4 w-4" />
+              <Smile className="h-3 w-3 sm:h-4 sm:w-4" />
             </Button>
           </div>
 
@@ -158,17 +158,18 @@ export default function MessageInput({ conversationId, onMessageSent }: MessageI
           </Button>
         </form>
 
-        <div className="flex items-center justify-between mt-3 text-xs text-muted-foreground">
-          <div className="flex items-center space-x-4">
-            <span>Press Enter to send, Shift+Enter for new line</span>
+        <div className="flex items-center justify-between mt-2 sm:mt-3 text-xs text-muted-foreground">
+          <div className="flex items-center space-x-2 sm:space-x-4 min-w-0">
+            <span className="hidden sm:inline">Press Enter to send, Shift+Enter for new line</span>
+            <span className="sm:hidden truncate">Enter to send</span>
           </div>
-          <div className="flex items-center space-x-2">
-            <span data-testid="text-character-count">{message.length}/4000</span>
+          <div className="flex items-center space-x-1 sm:space-x-2 flex-shrink-0">
+            <span data-testid="text-character-count" className="text-xs">{message.length}/4000</span>
             <Button
               type="button"
               variant="ghost"
               size="icon"
-              className="h-6 w-6"
+              className="h-5 w-5 sm:h-6 sm:w-6"
               onClick={clearConversation}
               data-testid="button-clear"
             >
