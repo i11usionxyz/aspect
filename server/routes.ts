@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
 import { storage } from "./storage";
-import { generateChatResponse, generateConversationTitle } from "./services/openai";
+import { generateChatResponse, generateConversationTitle } from "./services/gemini";
 import { insertConversationSchema, insertMessageSchema } from "@shared/schema";
 
 export async function registerRoutes(app: Express): Promise<Server> {
