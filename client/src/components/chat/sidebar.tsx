@@ -78,63 +78,6 @@ export default function Sidebar({ open, onClose, currentConversationId }: Sideba
             </Button>
           </div>
 
-          {/* API Configuration */}
-          <div className="p-4 sm:p-6 border-b border-border">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Configuration</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <Label htmlFor="api-key" className="text-sm font-medium">
-                    Gemini API Key
-                  </Label>
-                  <div className="relative mt-2">
-                    <Input
-                      id="api-key"
-                      type={showApiKey ? "text" : "password"}
-                      placeholder="AIza..."
-                      className="pr-10"
-                      data-testid="input-api-key"
-                    />
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="icon"
-                      className="absolute right-0 top-0 h-full px-3"
-                      onClick={() => setShowApiKey(!showApiKey)}
-                      data-testid="button-toggle-api-key"
-                    >
-                      {showApiKey ? (
-                        <EyeOff className="h-4 w-4" />
-                      ) : (
-                        <Eye className="h-4 w-4" />
-                      )}
-                    </Button>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Get your free API key from aistudio.google.com
-                  </p>
-                </div>
-
-                <div>
-                  <Label htmlFor="model" className="text-sm font-medium">
-                    Model
-                  </Label>
-                  <Select defaultValue="gemini-2.5-flash">
-                    <SelectTrigger className="mt-2" data-testid="select-model">
-                      <SelectValue placeholder="Select model" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="gemini-2.5-flash">Gemini 2.5 Flash</SelectItem>
-                      <SelectItem value="gemini-2.5-pro">Gemini 2.5 Pro</SelectItem>
-                      <SelectItem value="gemini-1.5-flash">Gemini 1.5 Flash</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
 
           {/* Conversations */}
           <div className="flex-1 p-4 sm:p-6 overflow-y-auto">

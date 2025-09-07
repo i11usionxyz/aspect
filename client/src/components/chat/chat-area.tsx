@@ -29,7 +29,7 @@ export default function ChatArea({ conversationId, onMenuClick }: ChatAreaProps)
           >
             <Menu className="h-5 w-5" />
           </Button>
-          <h1 className="text-base sm:text-lg font-semibold truncate px-2">AI Assistant</h1>
+          <h1 className="text-base sm:text-lg font-semibold truncate px-2">Aspect AI</h1>
           <Button variant="ghost" size="icon" data-testid="button-mobile-more">
             <MoreVertical className="h-5 w-5" />
           </Button>

@@ -46,10 +46,10 @@ export default function MessageList({ messages, isLoading, conversationId }: Mes
             <span className="text-primary text-xl sm:text-2xl">🧠</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-2">
-            Welcome to AI Assistant
+            Welcome to Aspect AI
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-            I'm here to help you with any questions or tasks. Start a conversation by selecting one from the sidebar or creating a new one.
+            I'm here to help you with any questions or tasks. Start a conversation or type a message below to begin.
           </p>
         </div>
       </div>
@@ -83,7 +83,7 @@ export default function MessageList({ messages, isLoading, conversationId }: Mes
               Start the conversation
             </h3>
             <p className="text-sm sm:text-base text-muted-foreground">
-              Type a message below to begin chatting with the AI assistant.
+              Type a message below to begin chatting with Aspect AI.
             </p>
           </div>
         ) : (

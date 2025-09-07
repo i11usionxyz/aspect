@@ -25,11 +25,8 @@ export default function Header({ onMenuClick }: HeaderProps) {
             </Button>
             
             <div className="flex items-center space-x-2 sm:space-x-3 min-w-0">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-primary-foreground text-lg sm:text-xl">🤖</span>
-              </div>
               <div className="min-w-0">
-                <h1 className="text-lg sm:text-xl font-semibold text-foreground truncate">AI Assistant</h1>
+                <h1 className="text-lg sm:text-xl font-semibold text-foreground truncate">Aspect AI</h1>
                 <p className="text-xs sm:text-sm text-muted-foreground hidden xs:block">Powered by Gemini</p>
               </div>
             </div>
